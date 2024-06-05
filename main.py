@@ -115,7 +115,7 @@ class Game:
                 
                 for xPos in self.carSpawnPositions:
                     if random.choice(self.carSpawnChanceArray) and carsSpawnedNow < self.settings.MAX_CARS_SPAWN_AT_ONCE:
-                        newCarSpeed = self.settings.CAR_SPEED + random.randint(0, self.settings.CAR_SPEED_RANDOM_ADD*10)/10
+                        newCarSpeed = self.settings.CAR_SPEED + random.randint(0, int(self.settings.CAR_SPEED_RANDOM_ADD*10))/10
                         
                         self.cars.append([xPos, -self.settings.ROAD_SIZE[1], newCarSpeed])
                         
